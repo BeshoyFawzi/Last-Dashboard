@@ -16,25 +16,25 @@ private subscriptions: Subscription[]=[];
 
   ngOnInit(): void {
    
-    let subscription:Subscription=this.activatedRoute.paramMap.subscribe(
-      (paramMap)=>{
-       this.ProjectID=Number(paramMap.get("pid"))
-       this._project=this._ProjectService.getProjectByID(this.ProjectID)
-      },
-      (err)=>{
-        console.log(err)
-      }
-    )
-    this.subscriptions.push(subscription);
+    // let subscription:Subscription=this.activatedRoute.paramMap.subscribe(
+    //   (paramMap)=>{
+    //    this.ProjectID=Number(paramMap.get("pid"))
+    //    this._project=this._ProjectService.getProjectByID(this.ProjectID)
+    //   },
+    //   (err)=>{
+    //     console.log(err)
+    //   }
+    // )
+    // this.subscriptions.push(subscription);
   }
   ngOnDestroy(): void {
     for(let sub of this.subscriptions)
       sub.unsubscribe();
    };
-   Update(name:any,state:any,budget:any,description:any){
-      this._project.project_name=name;
-      this._project.state=state;
-      this. _project.budget=budget;
-      this._project.description=description;
-    }
+  //  Update(name:any,state:any,budget:any,description:any){
+  //     this._project.project_name=name;
+  //     this._project.state=state;
+  //     this. _project.budget=budget;
+  //     this._project.description=description;
+  //   }
 }

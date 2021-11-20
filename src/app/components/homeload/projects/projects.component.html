@@ -21,10 +21,10 @@
         <br>
 
 <div class="container">
-   <button (click)="ProjectService()">Show All</button>  co
+   <!-- <button (click)="ProjectService()">Show All</button>   -->
   <div class="project-card col shadow" *ngFor="let project of projects">
     <div class="card text-left " >
-       <h2 class="pad-lef">{{project.catigori}}</h2> co
+       <!-- <h2 class="pad-lef">{{project.catigori}}</h2>  -->
       <div class="card-body">
 
         <h1 class="card-title title-color">{{project.project_name}} </h1>
@@ -33,8 +33,8 @@
         <h4 class="card-text">{{project.budget | currency:'USD'}}</h4>
       </div>
       <div class="card-footer">
-      <a href="#" class="btn btn-primary m-1" (click)="viewDetails(project.id)"y>Edite</a> 
-      <a href="#" class="btn btn-danger m-1" (click)="delete(project.id)">Delete</a>
+      <!-- <a href="#" class="btn btn-primary m-1" (click)="viewDetails(project.id)"y>Edite</a>  -->
+      <!-- <a href="#" class="btn btn-danger m-1" (click)="delete(project.id)">Delete</a> -->
 
 
 

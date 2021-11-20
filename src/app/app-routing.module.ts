@@ -13,13 +13,13 @@ import { LogInComponent } from './components/log-in/log-in.component';
 
 
 const routes: Routes = [
-  // { path: 'LogIn', component: LogInComponent },
-  // { path: '', redirectTo: 'LogIn', pathMatch: 'full' },
+  { path: 'LogIn', component: LogInComponent },
+  { path: '', redirectTo: 'LogIn', pathMatch: 'full' },
   {
     path: 'dash', 
     loadChildren: () => import('./components/homeload/homeload.module').then(m => m.HomeloadModule)
   },
-  { path: '', redirectTo: 'dash/home', pathMatch: 'full' },
+  // { path: '', redirectTo: 'dash/home', pathMatch: 'full' },
 
   { path: '**', component: NotFoundComponent }
 ];
