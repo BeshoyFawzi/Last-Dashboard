@@ -1,0 +1,149 @@
+<section class="search-filter">
+    <div class="container">
+      <div class="row shadow">
+      <div class="row m-3">
+        <div class="col-lg">
+          <select class="form-select" id="inlineFormSelectPref">
+            <option selected >Country</option>
+            <!-- <option value="1"></option>
+            <option value="2">User</option> -->
+          </select>
+        </div>
+        <div class="col-lg">
+          <select class="form-select" id="inlineFormSelectPref">
+            <option selected >Language</option>
+
+          </select>
+        </div>
+        <div class="col-lg ">
+          <input type="number" class="form-control" placeholder="Rate" aria-label="Rate">
+        </div>
+      </div>
+    </div>
+    </div>
+</section>
+
+
+<section class="show-users mt-5 shadow">
+  <div class="container">
+    <form class="row ">
+      <div class="col-3">
+        <div class="input-group ">
+          <input type="search" class="form-control input-group ser" id="inlineFormInputGroupUsername" placeholder="search">
+        </div>
+      </div>
+      <div class="col-3">
+
+      </div>
+      <div class="col-3">
+
+      </div>
+
+      <div class="col-2 ">
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Add new</button>
+
+<div style="width: 40%;" class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 id="offcanvasRightLabel">Add new</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body col">
+    <form class="row">
+      <div class="col-4">
+        <label for="validationDefault01" class="form-label">First name</label>
+        <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
+      </div>
+      <div class="col-4">
+        <label for="validationDefault02" class="form-label">Last name</label>
+        <input type="text" class="form-control" id="validationDefault02" value="Otto" required>
+      </div>
+      <div class="col-4">
+        <label for="validationDefaultUsername" class="form-label">Username</label>
+        <div class="input-group">
+          <span class="input-group-text" id="inputGroupPrepend2">@</span>
+          <input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="validationDefault03" class="form-label">City</label>
+        <input type="text" class="form-control" id="validationDefault03" required>
+      </div>
+      <div class="col-md-3">
+        <label for="validationDefault04" class="form-label">State</label>
+        <select class="form-select" id="validationDefault04" required>
+          <option>Pending</option>
+          <option>Active</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <label for="validationDefault05" class="form-label">Zip</label>
+        <input type="text" class="form-control" id="validationDefault05" required>
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+
+        </div>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+      </div>
+    </form>
+    <!-- //-------------------------------- -->
+    <div class="row">
+      <div class="card">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">firstName</th>
+              <th scope="col">lastName</th>
+              <th scope="col">Email</th>
+              <th scope="col">Rating</th>
+              <th scope="col">Country</th>
+              <th scope="col">Actions</th>
+       
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users">
+                
+              <th>{{user.ID}}</th>
+              <td>{{user.firstName}}</td>
+              <td>{{user.lastName}}</td>
+              <td>{{user.Email}}</td>
+              <td>{{user.Rating}}</td>
+              <td>{{user.Country}}</td>
+              <td class="td-user">
+                <a routerLink="edit"><i class="fas fa-edit"></i></a>
+                <i class="fas fa-trash-alt"></i>
+
+              </td>
+              <!-- <td><a routerLink="/users/edit">show details</a></td> -->
+            </tr>
+          </tbody>
+         
+        </table>
+          <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-right">
+              <li class="page-item ">
+                <a class="page-link">Previous</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
+
+      </div>
+    </div>
+  </div>
+</section>

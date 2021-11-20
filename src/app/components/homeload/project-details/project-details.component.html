@@ -1,0 +1,28 @@
+<p>project-details works!</p>
+
+
+<form class="row g-3">
+    <div class="col-md-12">
+        <label for="ProjectName" class="form-label">Project Name</label>
+        <!-- <input type="type" class="form-control" id="ProjectName" value="{{_project?.project_name}}"> -->
+      </div>
+    <div class="col-md-12">
+      <label for="ProjectState" class="form-label">Project State</label>
+      <!-- <input type="number" class="form-control" id="ProjectState" value="{{_project?.state}}"> -->
+    </div>
+    <div class="col-md-12">
+        <label for="ProjectBudget" class="form-label">Project Budget</label>
+        <!-- <input type="number" class="form-control" id="ProjectBudget" value="{{_project?.budget}}"> -->
+      </div>
+    <div class="col-md-12 mb-3">
+        <label for="ProjectDescription" class="form-label">Project Description</label>
+        <textarea class="form-control" id="ProjectDescription"  rows="3">
+        </textarea>
+            <!-- {{_project?.description}} -->
+
+      </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary" (click)="Update(_project?.project_name,_project?.state,_project?.budget,
+      project?.description)">Update</button>
+    </div>
+  </form>
